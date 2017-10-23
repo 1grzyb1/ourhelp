@@ -1,0 +1,115 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="css\index.css">
+    <script src="js/App.js"></script>
+    <link rel="shortcut icon" type="image/png" href="img/logo.png"/>
+</head>
+<body>
+
+
+<div class="mdl-layout-transparent mdl-layout mdl-js-layout layout">
+  <header class="mdl-layout__header mdl-layout__header--transparent">
+      <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title" onclick=" $(location).attr('href', 'index.html');">OurHelp</span>
+          <div class="mdl-layout-spacer"></div>
+          <div id="up"></div>
+      </div>
+  </header>
+  <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">OurHelp</span>
+      <nav class="mdl-navigation">
+        <div class="mdl-collapse mdl-collapse--opened">
+          <a class="mdl-navigation__link mdl-collapse__button">
+            <i class="material-icons mdl-collapse__icon mdl-animation--default">expand_more</i>
+            Categories
+          </a>
+          <div class="mdl-collapse__content-wrapper">
+            <div class="mdl-collapse__content mdl-animation--default" style="margin-top: -168px;">
+              <a class="mdl-navigation__link" onclick="$(location).attr('href', 'index.html');"><i class="material-icons menu-category-icon">build</i>Praca fizyczna</a>
+              <a class="mdl-navigation__link" onclick="$(location).attr('href', 'index.html');"><i class="material-icons menu-category-icon">border_color</i>Zadania domowe</a>
+              <a class="mdl-navigation__link" onclick="$(location).attr('href', 'index.html');"><i class="material-icons menu-category-icon">lightbulb_outline</i>Pomoc w nauce</a>
+            </div>
+          </div>
+        </div>
+        <a class="mdl-navigation__link" href="ranking.html"><i class="material-icons menu-category-icon">trending_up</i>Ranking</a>
+        <a class="mdl-navigation__link" href="info.html"><i class="material-icons menu-category-icon">help_outline</i>Info</a>
+          <div id="logged"></div>
+      </nav>
+    </div>
+
+    <main class="mdl-layout__content mdl-cell--middle ">
+
+
+
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+                <h1 class="mdl-card__title-text">Rejstracja</h1>
+            </div>
+            <div class="mdl-card__supporting-text">
+                <form action="#">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="text" id="username">
+                        <label class="mdl-textfield__label" for="username">Login</label>
+                    </div>
+                </form>
+                <form action="#">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="text" id="name">
+                        <label class="mdl-textfield__label" for="name">Imie</label>
+                    </div>
+                </form>
+                <form action="#">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="text" id="secondame">
+                        <label class="mdl-textfield__label" for="secondame">Nazwisko</label>
+                    </div>
+                </form>
+                <form action="#">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="text" id="email">
+                        <label class="mdl-textfield__label" for="email">Email</label>
+                    </div>
+                </form>
+                <form action="#">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="text" id="fb">
+                        <label class="mdl-textfield__label" for="email">Link do konta na Facebook'u</label>
+                    </div>
+                </form>
+                <form action="#">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="password" id="password">
+                        <label class="mdl-textfield__label" for="password">Hasło</label>
+                    </div>
+                </form>
+                <form action="#">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="password" id="repassword">
+                        <label class="mdl-textfield__label" for="repassword">Powtórz hasło</label>
+                    </div>
+                </form>
+                <button class=" mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-button--accent" onclick="api_register()">
+                    Zarejestruj się
+                </button>
+
+        </div>
+        </div>
+    </main>
+</div>
+</body>
+<script>
+    $(document).keypress(function (e) {
+        if (e.which == 13) {
+            api_register();
+        }
+    });
+
+</script>
+
+</html>

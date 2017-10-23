@@ -1,0 +1,10 @@
+<div style="color: black">"${title}" Login osoby która ci pomogła</div>
+<form>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input rows=1 class="mdl-textfield__input" id="${id}"></input>
+        <label for="${id}" class="mdl-textfield__label"></label>
+    </div>
+    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" onclick="api_helped('${id}', '${type}')">
+        <i class="material-icons" role="presentation">send</i><span class="visuallyhidden">add comment</span>
+    </button>
+</form>

@@ -1,0 +1,114 @@
+<!--
+USING:
+Expandable menu items from http://nickretallack.com/experiments/mdl/collapse/index.html
+-->
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="js-lib/jquery.tmpl.min.js"></script>
+    <script src="js/App.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="post-detailed post-detailed--blogpost mdl-layout-transparent mdl-layout mdl-js-layout layout faded mdl-grid">
+  <header class="mdl-layout__header mdl-layout__header--transparent">
+      <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title" onclick=" $(location).attr('href', 'index.html');">OurHelp</span>
+          <div class="mdl-layout-spacer"></div>
+          <div id="up"></div>
+      </div>
+  </header>
+  <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">OurHelp</span>
+      <nav class="mdl-navigation">
+        <div class="mdl-collapse mdl-collapse--opened">
+          <a class="mdl-navigation__link mdl-collapse__button">
+            <i class="material-icons mdl-collapse__icon mdl-animation--default">expand_more</i>
+            Categories
+          </a>
+          <div class="mdl-collapse__content-wrapper">
+            <div class="mdl-collapse__content mdl-animation--default" style="margin-top: -168px;">
+              <a class="mdl-navigation__link" onclick="$(location).attr('href', 'index.html');"><i class="material-icons menu-category-icon">build</i>Praca fizyczna</a>
+              <a class="mdl-navigation__link" onclick="$(location).attr('href', 'index.html');"><i class="material-icons menu-category-icon">border_color</i>Zadania domowe</a>
+              <a class="mdl-navigation__link" onclick="$(location).attr('href', 'index.html');"><i class="material-icons menu-category-icon">lightbulb_outline</i>Pomoc w nauce</a>
+            </div>
+          </div>
+        </div>
+        <a class="mdl-navigation__link" href="ranking.html"><i class="material-icons menu-category-icon">trending_up</i>Ranking</a>
+        <a class="mdl-navigation__link" href="info.html"><i class="material-icons menu-category-icon">help_outline</i>Info</a>
+          <div id="logged"></div>
+      </nav>
+    </div>
+
+
+    <div class="mdl-tooltip" data-mdl-for="logout_icon">
+        Log out
+    </div>
+    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--7-col-tablet mdl-cell--5-col-desktop mdl-cell--4-col-phone mdl-cell--top"
+         style="min-height:0!important;min-width:400px;">
+        <div class="mdl-card__media mdl-color-text--grey-50 category-comment" style="padding:10px!important">
+            <i class="material-icons ranking-indicator">trending_up</i>
+        </div>
+        <div class="mdl-color-text--grey-700 mdl-card__supporting-text ranking-container">
+            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                <thead>
+                <tr>
+                    <th class="mdl-data-table__cell--non-numeric">Użytkownik</th>
+                    <th>Liczba punktów</th>
+                </tr>
+                </thead>
+                <tbody id="rank">
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="loader">
+    <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
+</div>
+</body>
+<script>
+    $(function () {
+        api_rank();
+        api_logged();
+        api_loggedRight();
+    });
+
+    document.querySelector(".loader").classList.add("animate");
+    document.querySelector(".layout").classList.add("animate");
+    $(function () {
+        $('.mdl-collapse__content').each(function () {
+            var content = $(this);
+            content.css('margin-top', -content.height());
+        })
+
+        $(document.body).on('click', '.mdl-collapse__button', function () {
+            $(this).parent('.mdl-collapse').toggleClass('mdl-collapse--opened');
+        })
+    });
+    $(document).ready(function () {
+        if (window.innerWidth >= 720) {
+            $('<img/>').attr('src', 'https://orig00.deviantart.net/d43e/f/2016/196/2/8/material_design_wallpaper_red_034_by_charlie_henson-daa22ts.png').on('load', function () {
+                setTimeout(function () {
+                    document.querySelector(".loader").classList.add("faded");
+                    document.querySelector(".layout").classList.remove("faded");
+                    $(this).remove();
+                }, 100);
+            });
+        } else {
+            setTimeout(function () {
+                document.querySelector(".loader").classList.add("faded");
+                document.querySelector(".layout").classList.remove("faded");
+            }, 50);
+        }
+    });
+</script>
+</html>

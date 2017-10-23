@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Maven: org.jaxygen:jaxygen-apibrowser:1.0.8-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jaxygen/jaxygen-apibrowser/1.0.8-SNAPSHOT/jaxygen-apibrowser-1.0.8-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jaxygen/jaxygen-apibrowser/1.0.8-SNAPSHOT/jaxygen-apibrowser-1.0.8-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

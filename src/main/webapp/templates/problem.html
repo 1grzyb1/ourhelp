@@ -1,0 +1,17 @@
+<section class="challenge section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp mdl-cell--middle mdl-cell--6-col">
+    <header class="section__play-btn mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white category-${id}">
+        <i class="material-icons">${type}</i>
+    </header>
+    <div class="mdl-card mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+        <div class="mdl-card__supporting-text">
+            <h4>${title} - ${login}</h4><br>
+            ${description}
+            <div id="id" style="visibility: hidden">${id}</div>
+        </div>
+        <div class="mdl-card__actions">
+            <button onclick="$(location).attr('href', '${fb}')" class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect">Skontaktuj przez facebook'a</button>
+
+        </div>
+    </div>
+</section>
+
