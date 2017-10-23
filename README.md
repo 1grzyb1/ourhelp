@@ -1,3 +1,3 @@
 # ourhelp
 Ourhelp 
-http://grzybek.xyz:8080/ourhelp/index.html
+http://grzybek.xyz:8080/ourhelp/info.html
