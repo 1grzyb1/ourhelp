@@ -1,3 +1,4 @@
 # ourhelp
 Ourhelp 
-http://grzybek.xyz:8080/ourhelp/info.html
+Website to post classifieds about help needed. 
+Application was written in jaxygen for HackHeroes contest.
